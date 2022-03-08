@@ -1,0 +1,31 @@
+:root{
+    font-family: 'Jost', sans-serif;
+}
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+body,html,div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+h1{
+    font-weight: 300;
+}
+#feri-password{
+    all: unset;
+    width: 300px;
+    border: 2px black solid;
+    border-radius: 25px;
+    padding: .5em;
+}
+#feri-rating{
+    margin: 1em .25em;
+    font-size: 1.3em;
+}
