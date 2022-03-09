@@ -70,8 +70,9 @@ function UpperCaseRatingByFeri(){
     }
     return true
 }
-FeriRating();
 
 feriInput.addEventListener("input", e => {
     FeriRating();
 });   
+
+FeriRating(); //Start
