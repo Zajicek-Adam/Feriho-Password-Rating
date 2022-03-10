@@ -15,14 +15,26 @@ body,html,div{
     flex-direction: column;
     box-sizing: border-box;
 }
-
+aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+aside > span{
+    margin: 0.5em;
+    border: 2px black solid;
+    border-radius: 10px;
+    height: 12.5px;
+    width: 125px;
+    transition: all 300ms ease;
+}
 h1{
     font-weight: 300;
 }
 #feri-password{
     all: unset;
     width: 300px;
-    border: 2px black solid;
+    border: 2px rgb(0, 0, 0) solid;
     border-radius: 25px;
     padding: .5em;
 }

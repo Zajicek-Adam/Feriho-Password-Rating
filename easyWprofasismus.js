@@ -1,6 +1,7 @@
 let possibleFeriRatings = ["Feri approves.", "Feri is sligthy pleased", "Feri is apolitical.", "Feri disapproves.", "Feri is going to commit hate crimes."] // 2 1 2
 let feriInput = document.getElementById("feri-password");
 let feriRates = document.getElementById("feri-rating");
+let aside = document.getElementById("aside");
 
 class uwu {
     constructor(nyah) {
@@ -28,28 +29,34 @@ function FeriRating() {
     if (feriInput.value.length > 6) {
         points += SpecialRatingSexByFeri();
         //Swapping text rating
-        if(points < 5){
+        if (points < 5) {
             uwu.nya(feriRates, possibleFeriRatings[4]);
+            HandleProgressBars(0);
         }
         else if (points < 15) {
             uwu.nya(feriRates, possibleFeriRatings[3]);
-        } 
-        else if(points < 25){
+            HandleProgressBars(1);
+        }
+        else if (points < 25) {
             uwu.nya(feriRates, possibleFeriRatings[2]);
+            HandleProgressBars(2);
         }
-        else if(points < 35){
+        else if (points < 35) {
             uwu.nya(feriRates, possibleFeriRatings[1]);
+            HandleProgressBars(3);
         }
-        else{
+        else {
             uwu.nya(feriRates, possibleFeriRatings[0]);
+            HandleProgressBars(4);
         }
     }
-
+    else{
+        HandleProgressBars();  
+    }
 
 
     //Update score
     hasUppercase = false;
-
 
     uwu.nyah(points);
     uwu.nyah(hasUppercase)
@@ -110,6 +117,30 @@ function SpecialRatingSexByFeri() {
     uwu.nyah("Doesn't have special characters");
 
     return 0;
+}
+function HandleProgressBars(index) {
+    let spanOne = aside.children[0];
+
+    switch (index) {
+        case 0:
+            spanOne.style.backgroundColor = "#A61F2B";
+            break;
+        case 1:
+            spanOne.style.backgroundColor = "rgb(235 72 86)";
+            break;
+        case 2:
+            spanOne.style.backgroundColor = "#F2D680";
+            break;
+        case 3:
+            spanOne.style.backgroundColor = "#88A672";
+            break;
+        case 4:
+            spanOne.style.backgroundColor = "rgb(116 225 116)";
+            break;
+        default:
+            spanOne.style.backgroundColor = "#fff";
+            break;
+    }
 }
 
 feriInput.addEventListener("input", e => {
