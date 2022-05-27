@@ -1,4 +1,4 @@
-let possibleFeriRatings = ["Feri approves.", "Feri is sligthy pleased", "Feri is apolitical.", "Feri disapproves.", "Feri is going to commit hate crimes."] // 2 1 2
+let possibleFeriRatings = ["Feri approves.", "Feri is slightly pleased", "Feri is apolitical.", "Feri disapproves.", "Feri is going to commit hate crimes."] // 2 1 2
 let feriInput = document.getElementById("feri-password");
 let feriRates = document.getElementById("feri-rating");
 let aside = document.getElementById("aside");
